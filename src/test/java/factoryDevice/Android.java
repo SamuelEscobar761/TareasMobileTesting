@@ -14,14 +14,14 @@ public class Android implements IDevice{
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName","xiaomi:Samu");
         capabilities.setCapability("platformVersion","13");
-        capabilities.setCapability("appPackage","com.xiaomi.calendar");
-        capabilities.setCapability("appActivity","com.android.calendar.homepage.AllInOneActivity");
+        capabilities.setCapability("appPackage","com.miui.notes");
+        capabilities.setCapability("appActivity","com.miui.notes.ui.NotesListActivity");
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("automationName","uiautomator2");
 
         AndroidDriver device = null;
         try {
-            device = new AndroidDriver(new URL(" http://192.168.87.42:4723/wd/hub"),capabilities);
+            device = new AndroidDriver(new URL(" http://127.0.0.1:4723/wd/hub"),capabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
